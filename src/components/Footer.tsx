@@ -2,144 +2,201 @@
 
 import Link from "next/link";
 
-const footerSubdivisions = [
-  { name: "The Sapphire (S1, S2, S3, S4)", count: "68 căn" },
+const topSubdivisions = [
+  { name: "The Sapphire (S1 - S4)", count: "68 căn" },
   { name: "Masteri West Heights", count: "42 căn" },
   { name: "Lumière Evergreen", count: "19 căn" },
-  { name: "The Miami (Grand Sapphire)", count: "31 căn" },
-  { name: "The Sakura (Chuẩn Nhật)", count: "24 căn" },
+  { name: "The Miami & The Sakura", count: "55 căn" },
   { name: "Imperia Smart City", count: "20 căn" },
-  { name: "The Canopy Residences", count: "6 căn" },
-  { name: "The Tonkin (Indochine)", count: "4 căn" },
+  { name: "The Tonkin & The Canopy", count: "10 căn" },
 ];
 
-const guideLinks = [
-  "Bảng phí dịch vụ quản lý & gửi xe 2025",
-  "Quy trình làm thẻ cư dân & đăng ký vân tay",
-  "Kinh nghiệm chọn căn hộ hướng mát, không ồn",
-  "Mẫu hợp đồng thuê căn hộ chuẩn pháp lý",
-  "Chính sách tạm trú cho chuyên gia nước ngoài",
-  "Ký gửi cho thuê nhà trống / full nội thất",
+const helpfulGuides = [
+  { label: "Bảng phí quản lý & gửi xe 2025", href: "/#rental-guide-cards" },
+  { label: "Quy trình làm thẻ cư dân & FaceID", href: "/#rental-guide-cards" },
+  { label: "Mẫu hợp đồng thuê chuẩn pháp lý", href: "/#rental-guide-cards" },
+  { label: "Thủ tục tạm trú chuyên gia nước ngoài", href: "/#rental-guide-cards" },
+  { label: "Ký gửi cho thuê căn hộ nhanh 48h", href: "/#ky-gui" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-surface-white text-on-surface shadow-[0_-1px_10px_rgba(11,25,44,0.03)]">
-      <div className="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-xl">
-          {/* Column 1: Brand */}
-          <div className="flex flex-col gap-space-md">
-            <div className="flex items-center gap-space-xs">
-              <div className="w-9 h-9 rounded-xl bg-brand-navy-deep flex items-center justify-center text-surface-white">
-                <span className="material-symbols-outlined text-[20px]">apartment</span>
+    <footer className="w-full bg-slate-50 border-t border-slate-200/80 text-slate-700">
+      {/* Top Value Strip */}
+      <div className="border-b border-slate-200/60 bg-white">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center gap-3.5">
+              <div className="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100">
+                <span className="material-symbols-outlined text-[22px]">verified</span>
               </div>
               <div>
-                <span className="text-headline-sm font-bold text-brand-navy-deep">TimThue</span>
-                <span className="text-headline-sm font-extrabold text-accent-orange">SmartCity</span>
+                <h4 className="text-sm font-bold text-slate-900">100% Căn hộ thực tế</h4>
+                <p className="text-xs text-slate-500 mt-0.5">Đối soát phòng trống trực tiếp từ chủ nhà mỗi ngày</p>
               </div>
             </div>
-            <p className="text-body-sm text-on-surface-variant leading-relaxed">
-              Hệ thống kết nối trực tiếp khách thuê và chủ nhà tại đại đô thị Vinhomes Smart City Tây Mỗ, Nam Từ Liêm, Hà Nội. Cam kết giá thực tế, quỹ căn thật, hỗ trợ xem nhà 24/7 và tư vấn pháp lý minh bạch.
+
+            <div className="flex items-center gap-3.5">
+              <div className="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100">
+                <span className="material-symbols-outlined text-[22px]">support_agent</span>
+              </div>
+              <div>
+                <h4 className="text-sm font-bold text-slate-900">Miễn phí môi giới 100%</h4>
+                <p className="text-xs text-slate-500 mt-0.5">Dẫn xem nhà trực tiếp 24/7 không thu bất kỳ phụ phí nào</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3.5">
+              <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 border border-amber-100">
+                <span className="material-symbols-outlined text-[22px]">description</span>
+              </div>
+              <div>
+                <h4 className="text-sm font-bold text-slate-900">Hỗ trợ thủ tục trọn gói</h4>
+                <p className="text-xs text-slate-500 mt-0.5">Hợp đồng rõ ràng, hỗ trợ đăng ký tạm trú và thẻ cư dân</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Footer Links */}
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
+          {/* Col 1: Brand & Contact (4 cols) */}
+          <div className="lg:col-span-4 flex flex-col gap-4">
+            <Link href="/" className="flex items-center gap-3 no-underline">
+              <div className="w-10 h-10 rounded-xl bg-brand-navy-deep flex items-center justify-center text-white shadow-sm">
+                <span className="material-symbols-outlined text-[22px]">apartment</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="text-xl font-extrabold tracking-tight text-slate-900">TimThue</span>
+                <span className="text-xl font-extrabold text-accent-orange">SmartCity</span>
+              </div>
+            </Link>
+
+            <p className="text-sm text-slate-600 leading-relaxed max-w-sm">
+              Chuyên trang kết nối cho thuê căn hộ tại đại đô thị Vinhomes Smart City Tây Mỗ. Cập nhật quỹ căn chính chủ giá tốt nhất thị trường.
             </p>
-            <div className="flex flex-col gap-space-xs">
-              <div className="flex items-center gap-space-xs text-body-sm text-brand-navy-deep font-semibold">
-                <span className="material-symbols-outlined text-accent-orange text-[18px]">call</span>
-                <span>Hotline hỗ trợ: 0977 923 284</span>
+
+            <div className="flex flex-col gap-2.5 mt-1 bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs max-w-sm">
+              <a
+                href="tel:0977923284"
+                className="flex items-center justify-between text-slate-900 hover:text-accent-orange font-bold text-sm transition-colors no-underline"
+              >
+                <span className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-accent-orange text-[18px]">phone_in_talk</span>
+                  <span>Hotline: 0977.923.284</span>
+                </span>
+                <span className="text-[11px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full font-semibold border border-emerald-200">
+                  Hỗ trợ 24/7
+                </span>
+              </a>
+
+              <div className="flex items-start gap-2 text-xs text-slate-500 pt-1 border-t border-slate-100">
+                <span className="material-symbols-outlined text-[16px] text-slate-400 shrink-0 mt-0.5">location_on</span>
+                <span>VP S2.02 KĐT Vinhomes Smart City, Tây Mỗ, Nam Từ Liêm, Hà Nội</span>
               </div>
-              <div className="flex items-center gap-space-xs text-body-sm text-secondary">
-                <span className="material-symbols-outlined text-[18px]">schedule</span>
-                <span>Khung giờ phục vụ: 7:00 - 22:00 hàng ngày</span>
-              </div>
-              <div className="flex items-center gap-space-xs text-body-sm text-secondary">
-                <span className="material-symbols-outlined text-[18px]">location_on</span>
-                <span>Văn phòng: S2.02 Vinhomes Smart City, Hà Nội</span>
+
+              <div className="flex items-center gap-2 text-xs text-slate-500">
+                <span className="material-symbols-outlined text-[16px] text-slate-400 shrink-0">schedule</span>
+                <span>Phục vụ: 7:30 - 22:00 tất cả các ngày trong tuần</span>
               </div>
             </div>
           </div>
 
-          {/* Column 2: Subdivisions */}
-          <div className="flex flex-col gap-space-md">
-            <h3 className="text-headline-sm font-bold text-brand-navy-deep flex items-center gap-space-xs">
-              <span className="w-1.5 h-4 rounded-full bg-accent-orange" />
-              <span>Phân khu căn hộ</span>
+          {/* Col 2: Subdivisions (3 cols) */}
+          <div className="lg:col-span-3 flex flex-col gap-3.5">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900 flex items-center gap-2">
+              <span className="w-1.5 h-3.5 rounded-full bg-accent-orange" />
+              <span>Phân khu cho thuê</span>
             </h3>
-            <ul className="grid grid-cols-1 gap-space-xs text-body-sm text-on-surface-variant list-none p-0 m-0">
-              {footerSubdivisions.map((sub) => (
+            <ul className="flex flex-col gap-2 text-sm text-slate-600 list-none p-0 m-0">
+              {topSubdivisions.map((sub) => (
                 <li key={sub.name}>
-                  <Link href="/#phan-khu" className="hover:text-brand-navy-deep transition-colors flex items-center justify-between py-1 no-underline text-on-surface-variant">
+                  <Link
+                    href="/#phan-khu"
+                    className="hover:text-accent-orange transition-colors flex items-center justify-between py-1 no-underline text-slate-600 hover:translate-x-0.5 transition-transform"
+                  >
                     <span>{sub.name}</span>
-                    <span className="text-code-id text-secondary">{sub.count}</span>
+                    <span className="text-xs bg-slate-100 text-slate-500 px-2 py-0.5 rounded-md font-medium">
+                      {sub.count}
+                    </span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 3: Guides */}
-          <div className="flex flex-col gap-space-md">
-            <h3 className="text-headline-sm font-bold text-brand-navy-deep flex items-center gap-space-xs">
-              <span className="w-1.5 h-4 rounded-full bg-brand-navy-medium" />
-              <span>Cẩm nang &amp; Phí dịch vụ</span>
+          {/* Col 3: Guides & Services (2.5 cols) */}
+          <div className="lg:col-span-2 flex flex-col gap-3.5">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900 flex items-center gap-2">
+              <span className="w-1.5 h-3.5 rounded-full bg-blue-600" />
+              <span>Cẩm nang thuê</span>
             </h3>
-            <ul className="flex flex-col gap-space-xs text-body-sm text-on-surface-variant list-none p-0 m-0">
-              {guideLinks.map((link) => (
-                <li key={link}>
-                  <Link href="/#rental-guide-cards" className="hover:text-brand-navy-deep transition-colors flex items-center gap-space-xs py-1 no-underline text-on-surface-variant">
-                    <span className="material-symbols-outlined text-[16px] text-secondary">arrow_right</span>
-                    <span>{link}</span>
+            <ul className="flex flex-col gap-2.5 text-sm list-none p-0 m-0">
+              {helpfulGuides.map((guide) => (
+                <li key={guide.label}>
+                  <Link
+                    href={guide.href}
+                    className="hover:text-accent-orange transition-colors text-slate-600 no-underline block py-0.5 hover:translate-x-0.5 transition-transform"
+                  >
+                    {guide.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 4: Newsletter */}
-          <div className="flex flex-col gap-space-md">
-            <h3 className="text-headline-sm font-bold text-brand-navy-deep flex items-center gap-space-xs">
-              <span className="w-1.5 h-4 rounded-full bg-status-available-text" />
-              <span>Nhận căn mới mỗi ngày</span>
+          {/* Col 4: Newsletter & Quick Contact (3 cols) */}
+          <div className="lg:col-span-3 flex flex-col gap-3.5">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900 flex items-center gap-2">
+              <span className="w-1.5 h-3.5 rounded-full bg-emerald-600" />
+              <span>Nhận tin căn giá tốt</span>
             </h3>
-            <p className="text-body-sm text-on-surface-variant">
-              Đăng ký nhận thông báo căn hộ giá tốt nhất khi chủ nhà vừa gửi tin cho thuê trong 30 phút qua.
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Nhận thông báo căn hộ mới gửi và danh sách căn giảm giá sâu trong tuần qua Zalo/Email.
             </p>
-            <form className="flex flex-col gap-space-xs" onSubmit={(e) => e.preventDefault()}>
-              <div className="flex items-center bg-surface-container-low rounded-xl px-space-sm py-space-xs shadow-[0_1px_3px_rgba(11,25,44,0.05)]">
-                <span className="material-symbols-outlined text-secondary text-[18px] mr-space-xs">mail</span>
+
+            <form
+              className="flex flex-col gap-2"
+              onSubmit={(e) => {
+                e.preventDefault();
+                alert("Cảm ơn bạn! Chuyên viên sẽ gửi quỹ căn phù hợp qua số điện thoại của bạn ngay.");
+              }}
+            >
+              <div className="flex items-center bg-white rounded-xl px-3 py-2 border border-slate-200 focus-within:border-accent-orange transition-colors shadow-2xs">
+                <span className="material-symbols-outlined text-slate-400 text-[18px] mr-2">phone_iphone</span>
                 <input
-                  className="w-full bg-transparent text-body-sm text-on-surface placeholder:text-outline focus:outline-none border-none"
-                  placeholder="Số điện thoại hoặc Email"
-                  type="email"
+                  type="text"
+                  required
+                  placeholder="Nhập số điện thoại / Zalo"
+                  className="w-full bg-transparent text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none border-none p-0"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full py-2.5 px-space-md bg-brand-navy-deep text-surface-white text-label-md rounded-xl hover:bg-brand-navy-medium transition-all shadow-sm font-semibold flex items-center justify-center gap-space-xs"
+                className="w-full py-2.5 px-4 bg-brand-navy-deep hover:bg-brand-navy-medium text-white text-xs font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span>Đăng ký nhận quỹ căn</span>
-                <span className="material-symbols-outlined text-[16px]">send</span>
+                <span>Nhận Quỹ Căn Miễn Phí</span>
+                <span className="material-symbols-outlined text-[15px]">send</span>
               </button>
             </form>
-            <div className="p-space-sm rounded-xl bg-surface-container-low">
-              <div className="flex items-center gap-space-xs text-label-sm text-brand-navy-deep font-bold mb-1">
-                <span className="material-symbols-outlined text-status-available-text text-[16px]">verified</span>
-                <span>Minh bạch thông tin</span>
-              </div>
-              <p className="text-body-sm text-on-surface-variant m-0">
-                Tất cả căn hộ niêm yết đều được đối soát tình trạng phòng trống định kỳ. Hoàn toàn miễn phí phí môi giới với khách thuê.
-              </p>
+
+            <div className="flex items-center gap-2 text-[11px] text-slate-400 mt-1">
+              <span className="material-symbols-outlined text-emerald-500 text-[14px]">lock</span>
+              <span>Bảo mật 100% • Không gọi làm phiền</span>
             </div>
           </div>
         </div>
 
-        {/* Bottom Disclaimer */}
-        <div className="pt-space-lg bg-surface-porcelain/60 rounded-xl px-space-md py-space-sm flex flex-col md:flex-row items-center justify-between gap-space-sm">
-          <div className="flex items-center gap-space-xs">
-            <span className="material-symbols-outlined text-secondary text-[16px]">info</span>
-            <p className="text-label-sm text-secondary m-0">
-              Tuyên bố: TimThueSmartCity.com là nền tảng số độc lập kết nối dịch vụ thuê căn hộ, không phải website chính thức từ chủ đầu tư Vinhomes.
-            </p>
-          </div>
-          <p className="text-label-sm text-secondary shrink-0 m-0">© 2025 TimThueSmartCity.com. Toàn bộ bản quyền được bảo lưu.</p>
+        {/* Bottom Disclaimer & Copyright */}
+        <div className="mt-12 pt-6 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+          <p className="m-0 text-center sm:text-left">
+            © 2025 <strong className="text-slate-700 font-semibold">TimThueSmartCity.com</strong>. Toàn bộ bản quyền được bảo lưu.
+          </p>
+          <p className="m-0 text-center sm:text-right text-[11px] text-slate-400 max-w-xl">
+            Tuyên bố: TimThueSmartCity là nền tảng số độc lập kết nối dịch vụ thuê căn hộ, không phải website chính thức của chủ đầu tư Vinhomes.
+          </p>
         </div>
       </div>
     </footer>
