@@ -50,7 +50,7 @@ export default function RootLayout({
       </head>
       <body className="bg-surface font-sans text-body-md text-on-surface antialiased">
         <Header />
-        <main className="w-full pt-20 bg-surface-porcelain min-h-[calc(100vh-280px)]">
+        <main className="w-full pt-16 sm:pt-20 pb-20 lg:pb-0 bg-surface-porcelain min-h-[calc(100vh-280px)]">
           {children}
         </main>
         <Footer />
