@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* ===== Colors ===== */
+  --color-on-error-container: #93000a;
+  --color-outline: #75777d;
+  --color-tertiary-fixed: #ffdbca;
+  --color-surface-bright: #f8f9ff;
+  --color-on-tertiary-fixed: #341100;
+  --color-border-active: #CBD5E1;
+  --color-status-pending-bg: #FFFBEB;
+  --color-surface-container-lowest: #ffffff;
+  --color-border-subtle: #E2E8F0;
+  --color-primary-fixed: #d6e3fe;
+  --color-on-secondary-fixed-variant: #29486d;
+  --color-on-error: #ffffff;
+  --color-primary-container: #0e1c2f;
+  --color-surface-container-low: #eff4ff;
+  --color-on-tertiary-fixed-variant: #783200;
+  --color-status-pending-text: #D97706;
+  --color-inverse-on-surface: #eaf1ff;
+  --color-brand-navy-medium: #1E3E62;
+  --color-tertiary: #000000;
+  --color-secondary-container: #b3d1fd;
+  --color-on-background: #0b1c30;
+  --color-accent-orange: #F97316;
+  --color-error: #ba1a1a;
+  --color-surface-container-high: #dce9ff;
+  --color-inverse-surface: #213145;
+  --color-on-primary-fixed-variant: #3a475c;
+  --color-surface-tint: #525f75;
+  --color-surface: #f8f9ff;
+  --color-surface-variant: #d3e4fe;
+  --color-zalo-blue: #0068FF;
+  --color-on-secondary-fixed: #001c38;
+  --color-on-primary: #ffffff;
+  --color-inverse-primary: #bac7e1;
+  --color-status-available-text: #059669;
+  --color-tertiary-container: #341100;
+  --color-on-tertiary-container: #d95f00;
+  --color-secondary-fixed-dim: #aac9f4;
+  --color-on-primary-container: #77849c;
+  --color-primary-fixed-dim: #bac7e1;
+  --color-primary: #000000;
+  --color-status-available-bg: #ECFDF5;
+  --color-error-container: #ffdad6;
+  --color-on-primary-fixed: #0e1c2f;
+  --color-secondary-fixed: #d3e4ff;
+  --color-surface-container-highest: #d3e4fe;
+  --color-background: #f8f9ff;
+  --color-secondary: #426086;
+  --color-surface-dim: #cbdbf5;
+  --color-accent-orange-dark: #E16A00;
+  --color-outline-variant: #c5c6cd;
+  --color-tertiary-fixed-dim: #ffb690;
+  --color-on-tertiary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-surface-container: #e5eeff;
+  --color-surface-white: #FFFFFF;
+  --color-on-secondary-container: #3b5a7f;
+  --color-on-surface-variant: #44474c;
+  --color-brand-navy-deep: #0B192C;
+  --color-surface-porcelain: #F8FAFC;
+  --color-on-surface: #0b1c30;
+
+  /* ===== Spacing ===== */
+  --spacing-margin-mobile: 1rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 0.75rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-margin: 2rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-lg: 1.5rem;
+
+  /* ===== Border Radius ===== */
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  /* ===== Font Family ===== */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* ===== Font Size ===== */
+  --font-size-headline-lg: 24px;
+  --font-size-headline-lg--line-height: 32px;
+
+  --font-size-label-sm: 11px;
+  --font-size-label-sm--line-height: 14px;
+
+  --font-size-body-sm: 13px;
+  --font-size-body-sm--line-height: 18px;
+
+  --font-size-headline-sm: 16px;
+  --font-size-headline-sm--line-height: 24px;
+
+  --font-size-headline-xl-mobile: 24px;
+  --font-size-headline-xl-mobile--line-height: 32px;
+
+  --font-size-price-lg: 22px;
+  --font-size-price-lg--line-height: 28px;
+
+  --font-size-headline-md: 20px;
+  --font-size-headline-md--line-height: 28px;
+
+  --font-size-label-md: 13px;
+  --font-size-label-md--line-height: 16px;
+
+  --font-size-body-lg: 16px;
+  --font-size-body-lg--line-height: 26px;
+
+  --font-size-code-id: 12px;
+  --font-size-code-id--line-height: 16px;
+
+  --font-size-price-md: 18px;
+  --font-size-price-md--line-height: 24px;
+
+  --font-size-display-hero-mobile: 30px;
+  --font-size-display-hero-mobile--line-height: 38px;
+
+  --font-size-body-md: 14px;
+  --font-size-body-md--line-height: 22px;
+
+  --font-size-display-hero: 48px;
+  --font-size-display-hero--line-height: 56px;
+
+  --font-size-headline-xl: 32px;
+  --font-size-headline-xl--line-height: 40px;
+}
+
+/* ===== Base Styles ===== */
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    overscroll-behavior: none;
+  }
+
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
