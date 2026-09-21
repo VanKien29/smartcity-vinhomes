@@ -22,43 +22,6 @@ const helpfulGuides = [
 export default function Footer() {
   return (
     <footer className="w-full bg-slate-50 border-t border-slate-200/80 text-slate-700">
-      {/* Top Value Strip */}
-      <div className="border-b border-slate-200/60 bg-white">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex items-center gap-3.5">
-              <div className="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100">
-                <span className="material-symbols-outlined text-[22px]">verified</span>
-              </div>
-              <div>
-                <h4 className="text-sm font-bold text-slate-900">100% Căn hộ thực tế</h4>
-                <p className="text-xs text-slate-500 mt-0.5">Đối soát phòng trống trực tiếp từ chủ nhà mỗi ngày</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3.5">
-              <div className="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100">
-                <span className="material-symbols-outlined text-[22px]">support_agent</span>
-              </div>
-              <div>
-                <h4 className="text-sm font-bold text-slate-900">Miễn phí môi giới 100%</h4>
-                <p className="text-xs text-slate-500 mt-0.5">Dẫn xem nhà trực tiếp 24/7 không thu bất kỳ phụ phí nào</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3.5">
-              <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 border border-amber-100">
-                <span className="material-symbols-outlined text-[22px]">description</span>
-              </div>
-              <div>
-                <h4 className="text-sm font-bold text-slate-900">Hỗ trợ thủ tục trọn gói</h4>
-                <p className="text-xs text-slate-500 mt-0.5">Hợp đồng rõ ràng, hỗ trợ đăng ký tạm trú và thẻ cư dân</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer Links */}
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
