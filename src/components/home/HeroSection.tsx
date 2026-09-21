@@ -1,18 +1,18 @@
 export default function HeroSection() {
   return (
     <section className="relative w-full overflow-hidden bg-[#071322] text-surface-white -mt-2 pt-10 sm:pt-12 lg:pt-14 pb-28 sm:pb-32 lg:pb-36">
-      {/* Background Image with optimized dark overlay */}
+      {/* Background Image - Clear, crisp and vibrant */}
       <div className="absolute inset-0 z-0">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           alt="Vinhomes Smart City Tây Mỗ Hà Nội"
-          className="w-full h-full object-cover object-center transform scale-105 transition-transform duration-1000 ease-out opacity-45"
+          className="w-full h-full object-cover object-center transform scale-105 transition-transform duration-1000 ease-out opacity-80"
           src="https://lh3.googleusercontent.com/aida/AEtjO1XxKHJswzppUYKY5VR9nx64LHl00dWSixiQh_Uu_wFrICeNyo-35BGN049C793Q-VOz-xeCiO5eg_hKdaLc9fOXYb8jIW5Z9yDdarv680zLRYIV-XJ6f4rA-yLddXPm8G4j_9j4Jz9NhUAoMN5JeZ54uSH-xKj0SGMPTxUx8aq3uhX0CTmoXvH3jkgZr8QmLXEDWZkBim21LdtFHfLyxGKJpQFZbTTYBV4GbBxejSX8Ut3l3tonOGRDSvM"
         />
       </div>
 
-      {/* Layered Rich Gradients for maximum text legibility & pop */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#071322]/90 via-[#0B192C]/75 to-[#071322]/95" />
+      {/* Balanced Gradients - Ensuring image shines through while text stays sharp */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#071322]/65 via-[#0B192C]/45 to-[#071322]/85" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] sm:w-[900px] h-[350px] bg-orange-500/15 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
