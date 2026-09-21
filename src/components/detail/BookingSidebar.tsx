@@ -12,9 +12,9 @@ export default function BookingSidebar({ apartment }: { apartment: Apartment }) 
       {/* Price */}
       <div className="mt-4">
         <div className="text-[32px] leading-tight font-extrabold text-brand-navy-deep tracking-tight">
-          {apartment.priceText} triệu/tháng
+          {apartment.priceText.replace("triệu", "").trim()} triệu/tháng
         </div>
-        <div className="text-sm text-on-surface-variant mt-1">Giá thuê căn hộ</div>
+        <div className="text-sm text-on-surface-variant mt-1">Giá thuê niêm yết chính chủ</div>
       </div>
 
       <div className="border-t border-border-subtle/70 my-5" />

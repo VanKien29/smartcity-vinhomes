@@ -3,21 +3,32 @@ import type { Apartment } from "@/data/apartments";
 
 export default function Breadcrumb({ apartment }: { apartment: Apartment }) {
   return (
-    <section className="w-full bg-surface-white py-space-sm border-b border-border-subtle/60">
-      <div className="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex flex-wrap items-center justify-between gap-y-space-xs">
-        <nav className="flex items-center gap-space-xs text-body-sm text-on-surface-variant">
-          <Link href="/" className="hover:text-brand-navy-deep no-underline transition-colors flex items-center gap-1 text-on-surface-variant">
-            <span className="material-symbols-outlined text-[16px]">home</span>
-            Trang chủ
+    <section className="w-full bg-slate-50/80 border-b border-slate-200/70 py-2.5">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 text-xs sm:text-sm">
+        {/* Breadcrumb Path */}
+        <nav className="flex items-center gap-1.5 sm:gap-2 text-slate-500 overflow-x-auto whitespace-nowrap py-0.5">
+          <Link
+            href="/"
+            className="hover:text-brand-navy-deep no-underline transition-colors flex items-center gap-1 text-slate-600 font-medium"
+          >
+            <span className="material-symbols-outlined text-[17px]">home</span>
+            <span>Trang chủ</span>
           </Link>
-          <span className="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
-          <span className="text-on-surface-variant">{apartment.subdivision}</span>
-          <span className="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
-          <span className="text-brand-navy-deep font-semibold">Căn hộ {apartment.typeLabel}</span>
-          <span className="ml-1.5 px-2 py-0.5 rounded bg-surface-container text-code-id text-brand-navy-medium">
-            Mã: {apartment.code}
+          <span className="text-slate-300">/</span>
+          <span className="text-slate-600 font-medium">{apartment.subdivision}</span>
+          <span className="text-slate-300">/</span>
+          <span className="text-slate-900 font-semibold truncate">
+            Căn hộ {apartment.typeLabel.split("·")[0]?.trim() || apartment.typeLabel} ({apartment.area}m²)
           </span>
         </nav>
+
+        {/* Mã Căn Tag */}
+        <div className="shrink-0">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold shadow-2xs">
+            <span className="text-slate-400 font-normal">Mã căn:</span>
+            <strong className="text-brand-navy-deep font-mono font-bold">{apartment.code}</strong>
+          </span>
+        </div>
       </div>
     </section>
   );
