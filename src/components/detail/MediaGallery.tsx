@@ -132,16 +132,6 @@ export default function MediaGallery({ apartment }: { apartment: Apartment }) {
             </div>
           </div>
         </div>
-
-        {/* Floating View All Photos Button in corner - Standard Modern Real Estate UX */}
-        <button
-          type="button"
-          className="absolute bottom-3 right-3 z-20 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/95 hover:bg-white text-slate-900 text-xs sm:text-sm font-bold shadow-lg backdrop-blur-md transition-all hover:scale-105 border border-white/80 cursor-pointer"
-          onClick={() => apartment.images[0] && openLightbox(apartment.images[0])}
-        >
-          <span className="material-symbols-outlined text-[17px] text-accent-orange">photo_library</span>
-          <span>Xem tất cả {apartment.photoCount} ảnh</span>
-        </button>
       </div>
 
       {/* Bottom Toolbar - Clean, well-spaced, guaranteed never covered */}
@@ -159,7 +149,7 @@ export default function MediaGallery({ apartment }: { apartment: Apartment }) {
           onClick={() => apartment.images[0] && openLightbox(apartment.images[0])}
         >
           <span className="material-symbols-outlined text-[16px] text-accent-orange">photo_library</span>
-          <span>Mở thư viện ảnh full HD</span>
+          <span>Xem tất cả {apartment.photoCount} ảnh thực tế</span>
         </button>
       </div>
     </div>
