@@ -144,11 +144,6 @@ export default function Footer() {
                 <span className="material-symbols-outlined text-[15px]">send</span>
               </button>
             </form>
-
-            <div className="flex items-center gap-2 text-[11px] text-slate-400 mt-1">
-              <span className="material-symbols-outlined text-emerald-500 text-[14px]">lock</span>
-              <span>Bảo mật 100% • Không gọi làm phiền</span>
-            </div>
           </div>
         </div>
 
