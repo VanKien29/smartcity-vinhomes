@@ -10,11 +10,6 @@ export default function DetailHeader({ apartment }: { apartment: Apartment }) {
         {/* Top Row: Badges & Price */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold shadow-2xs">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Đang trống • Vào ở ngay</span>
-            </span>
-
             <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold">
               <span className="material-symbols-outlined text-[14px] text-slate-400">apartment</span>
               <span>{apartment.building} • {apartment.subdivision}</span>

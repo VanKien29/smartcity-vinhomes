@@ -16,17 +16,6 @@ export default function HeroSection() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] sm:w-[900px] h-[350px] bg-orange-500/15 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-        {/* Sync Status Badge */}
-        <div className="inline-flex items-center gap-2.5 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-slate-900/80 border border-emerald-500/40 text-xs sm:text-sm font-semibold text-emerald-300 backdrop-blur-md shadow-sm mb-5 sm:mb-6">
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
-          </span>
-          <span>
-            Quỹ căn cập nhật trực tiếp mỗi 30 phút • <strong className="text-white font-bold">269 căn thực tế</strong> (214 căn ở ngay)
-          </span>
-        </div>
-
         {/* Main Headline */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white leading-[1.15] max-w-5xl mb-3 sm:mb-4 drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
           Cho Thuê Căn Hộ Chung Cư
