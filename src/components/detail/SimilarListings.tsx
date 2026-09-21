@@ -24,22 +24,6 @@ export default function SimilarListings({ apartments }: { apartments: Apartment[
             <ApartmentCard key={apt.id} apartment={apt} variant="compact" />
           ))}
         </div>
-
-        {/* Quick Need Tags */}
-        <div className="flex flex-wrap items-center gap-2 pt-space-sm">
-          <span className="text-label-md text-on-surface-variant mr-1">Xem thêm theo nhu cầu:</span>
-          {[
-            "Căn hộ Imperia đang cho thuê",
-            "Căn 2 phòng ngủ",
-            "2 phòng ngủ 10–12 triệu",
-            "Tòa I1 Imperia",
-            "Bảng giá thuê Smart City",
-          ].map((tag) => (
-            <Link key={tag} href="/" className="px-3 py-1 rounded-lg bg-surface text-brand-navy-deep text-body-sm hover:bg-surface-container transition-colors no-underline">
-              {tag}
-            </Link>
-          ))}
-        </div>
       </div>
     </section>
   );

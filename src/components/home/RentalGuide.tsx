@@ -65,10 +65,6 @@ export default function RentalGuide() {
       <div className="bg-surface-white rounded-2xl p-space-md lg:p-space-xl shadow-sm border border-border-subtle">
         {/* Intro */}
         <div className="max-w-4xl mb-space-lg">
-          <div className="inline-flex items-center gap-2 bg-surface-container-low text-brand-navy-medium px-3.5 py-1 rounded-full text-label-sm font-bold tracking-wider uppercase mb-3 border border-border-subtle">
-            <span className="w-2 h-2 rounded-full bg-accent-orange animate-pulse" />
-            <span>QUỸ CĂN CHO THUÊ T09/2026</span>
-          </div>
           <h2 className="text-headline-xl text-brand-navy-deep font-bold tracking-tight mb-3">
             Cho thuê căn hộ Vinhomes Smart City Tây Mỗ – quỹ căn thực tế
           </h2>
