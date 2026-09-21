@@ -2,7 +2,7 @@
 
 export default function SearchFilter() {
   return (
-    <section className="max-w-[1360px] w-full mx-auto px-4 sm:px-6 lg:px-8 -mt-14 sm:-mt-16 lg:-mt-18 relative z-20">
+    <section className="max-w-[1360px] w-full mx-auto px-4 sm:px-6 lg:px-8 -mt-16 sm:-mt-20 lg:-mt-24 relative z-20">
       <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-5 lg:p-6 text-on-surface border border-slate-100">
         {/* Header */}
         <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md mb-space-md pb-space-sm border-b border-border-subtle">
